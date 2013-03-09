@@ -126,7 +126,7 @@
          * Activate a menu row.
          */
         var activate = function(row) {
-                if (row == activeRow) {
+                if (row === activeRow) {
                     return;
                 }
 
@@ -198,7 +198,7 @@
                 }
 
                 if (lastDelayLoc &&
-                        loc.x == lastDelayLoc.x && loc.y == lastDelayLoc.y) {
+                        loc.x === lastDelayLoc.x && loc.y === lastDelayLoc.y) {
                     // If the mouse hasn't moved since the last time we checked
                     // for activation status, immediately activate.
                     return 0;
@@ -225,7 +225,7 @@
                 // increase (somewhat counterintuitively).
                 function slope(a, b) {
                     return (b.y - a.y) / (b.x - a.x);
-                };
+                }
 
                 var upperSlope = slope(loc, upperRight),
                     lowerSlope = slope(loc, lowerRight),
